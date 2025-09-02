@@ -1,0 +1,36 @@
+<Window x:Class="zadanie_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zadanie_3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas Width="200" Height="200">
+        <!-- Main Body (Circle with Gradient) -->
+        <Ellipse Width="150" Height="150" Canvas.Left="25" Canvas.Top="25">
+            <Ellipse.Fill>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFFFC125" Offset="0"/>
+                    <!-- Yellow-Orange -->
+                    <GradientStop Color="#FFD81B60" Offset="0.5"/>
+                    <!-- Red-Pink -->
+                    <GradientStop Color="#FF8E24AA" Offset="1"/>
+                    <!-- Purple -->
+                </RadialGradientBrush>
+            </Ellipse.Fill>
+            <Ellipse.Stroke>
+                <SolidColorBrush Color="Black"/>
+            </Ellipse.Stroke>
+            <Ellipse.StrokeThickness>
+                2
+            </Ellipse.StrokeThickness>
+        </Ellipse>
+
+        <!-- Highlight (блик) -->
+        <Ellipse Width="50" Height="50" Canvas.Left="50" Canvas.Top="50" Fill="White" Opacity="0.3"/>
+
+        <!-- Knot (узел) -->
+        <Path Data="M 92,180 C 92,185 98,185 98,180 C 98,190 95,195 92,190 z" Fill="#FF3F51B5"/>
+    </Canvas>
+</Window>
