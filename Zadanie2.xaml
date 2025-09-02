@@ -1,0 +1,32 @@
+<Window x:Class="zadanie_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zadanie_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas Width="200" Height="200">
+        <!-- Body -->
+        <Ellipse Width="60" Height="50" Fill="Yellow" Stroke="Black" StrokeThickness="1" Canvas.Left="70" Canvas.Top="80"/>
+
+        <!-- Wing -->
+        <Path Data="M 130,90 Q 160,70 130,50" Stroke="Black" StrokeThickness="1" Fill="Transparent" Canvas.Left="-37.5" Canvas.Top="-5.416" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        <!-- Beak -->
+        <Polygon Points="70,90 70,100 50,95" Fill="Orange" Stroke="Black" StrokeThickness="1" HorizontalAlignment="Center" Canvas.Top="10" VerticalAlignment="Top"/>
+
+        <!-- Eye -->
+        <Ellipse Width="10" Height="10" Fill="White" Stroke="Black" StrokeThickness="1" Canvas.Left="90" Canvas.Top="85"/>
+        <Path Data="M 130,90 Q 160,70 130,50" Stroke="Black" StrokeThickness="1" Fill="Transparent" Canvas.Left="108" Canvas.Top="49" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Width="14">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="58.021"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+    </Canvas>
+</Window>
